@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Colcon/ROS 2 (if someone builds your package locally)
+build/
+install/
+log/
+
+# Large artifacts (examples)
+*.bag
+*.pcd
+*.ply
+*.stl
+*.onnx
+*.pth
+*.pt
+*.mp4
