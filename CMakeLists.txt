@@ -1,13 +1,19 @@
 cmake_minimum_required(VERSION 3.8)
-project(asl_rover_offboard_msgs)
+project(custom_offboard_msgs)
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TrajectoryPlan.msg"
   DEPENDENCIES std_msgs
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/SafetyTrip.msg"
+  DEPENDENCIES builtin_interfaces
 )
 
 ament_export_dependencies(rosidl_default_runtime)
